@@ -1,4 +1,4 @@
-document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/admin.css"><link rel="stylesheet" href="/dashboard.css?v=1"><link rel="stylesheet" href="/pagination.css?v=1"><link rel="stylesheet" href="/admin-tabs.css?v=1">');
+document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="/admin.css"><link rel="stylesheet" href="/dashboard.css?v=1"><link rel="stylesheet" href="/pagination.css?v=1"><link rel="stylesheet" href="/admin-tabs.css?v=1"><link rel="stylesheet" href="/admin-account.css?v=1">');
 const $=(s)=>document.querySelector(s), moneyMeters=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:3,maximumFractionDigits:3});
 let mode='login'; const auth=$('#auth'), purchase=$('#purchase');
 document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{mode=b.dataset.open;$('#auth-title').textContent=mode==='login'?'Entrar':'Criar conta';document.querySelectorAll('.register-only').forEach(x=>x.style.display=mode==='register'?(x.tagName==='LABEL'?'flex':'block'):'none');auth.showModal()});
